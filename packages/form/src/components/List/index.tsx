@@ -301,9 +301,9 @@ const ProFormList: React.FC<ProFormListProps> = ({
     Icon: DeleteOutlined,
     tooltipText: '删除此行',
   },
+  actionRef,                                               
   ...rest
 }) => {
-  const actionRef = useRef<FormListOperation>();
   const context = useContext(ConfigProvider.ConfigContext);
   const listContext = useContext(FormListContext);
   const baseClassName = context.getPrefixCls('pro-form-list');
